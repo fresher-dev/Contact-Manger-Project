@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact Manager Home
+{% endblock %}
+
+{% block content %}
+
+    <main>
+      <section class="hero">
+        <h2>Welcome to Contact Manager</h2>
+        <p>A simple contact manager to organize your contacts.</p>
+      </section>
+      <section class="features">
+        <h2>Features</h2>
+        <ul>
+          <li>
+          <div class="text-center">
+              <a href="{% url 'contact_manager:all' %}" class="btn btn-primary">View all contacts</a>
+          </div>
+          </li>
+          <li>
+            <div class="text-center">
+              <a href="{% url 'contact_manager:add' %}" class="btn btn-success">Add new contacts</a>
+          </div>
+          </li>
+          <li>
+          <div class="text-center">
+              <a href="{% url 'contact_manager:all' %}" class="btn btn-warning">Edit and delete existing contacts</a>
+          </div>
+          </li>
+          <li>
+          <div class="text-center">
+              <a href="{% url 'contact_manager:search' %}" class="btn btn-secondary">Search for contacts</a>
+          </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+
+{% endblock %}

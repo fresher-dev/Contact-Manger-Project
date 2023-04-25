@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Delete Contact
+{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <form class="form" action="{% url 'contact_manager:all' %}" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <div class="text-center">
+                <button type="submit">Edit Contact</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
